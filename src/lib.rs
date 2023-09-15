@@ -11,3 +11,6 @@ pub use cons::run_cons;
 
 pub mod leak;
 pub use leak::run_leak;
+
+pub mod tree;
+pub use tree::run_tree;

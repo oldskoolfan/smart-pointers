@@ -1,6 +1,6 @@
 use std::env;
 
-use smart_pointers::{run_deref, run_drop, run_cons, run_leak};
+use smart_pointers::{run_deref, run_drop, run_cons, run_leak, run_tree};
 
 fn main() {
   if let Some(program_name) = get_program_arg() {
@@ -19,6 +19,7 @@ fn run_program(name: &str) {
     "cons" => run_cons(),
     "leak" => run_leak(false),
     "leakkk" => run_leak(true),
+    "tree" => run_tree(),
     &_ => print_help(),
   }
 }
